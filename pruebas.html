@@ -1,0 +1,30 @@
+<h2>Record</h2>
+        <p>
+          <button id=record onClick="ejec();">hola</button>
+          <button id=stopRecord disabled>Stop</button>
+        </p>
+        <p>
+          <audio id=recordedAudio></audio>
+
+        </p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
+<script>
+  let tempo = 60;
+  var s01 = new Howl({
+      src: ['s01.mp3'],
+      rate: (tempo*0.6)/60
+  });
+  var s02 = new Howl({
+      src: ['s02.mp3'],
+      rate: (tempo*0.5)/60
+  });
+  function ejec(){
+    const concatRecordings = () => {
+        let blob = new Blob(recData),
+            url = URL.createObjectURL(blob),
+            audio = new Audio(url);
+        audio.play(); //<-- or serve it as a download
+    }
+  }
+
+</script>
