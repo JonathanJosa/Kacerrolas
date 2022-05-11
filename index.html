@@ -17,14 +17,49 @@
   <div class="top">
     <div class="back">
       <div class="player">
-        <div class="image"></div>
-
+        <div class="img"></div>
+        <div class="container">
+          <div class="song">
+            <div class="name">Plague</div>
+            <div class="artist">Crystal Castles</div>
+          </div>
+          <div class="control">
+            <div class="progressBar">
+<main class="perspective" id="third-bar">
+  <section class="bar">
+      <div class="bar-face back percentage"></div>
+      <div class="bar-face floor percentage"></div>
+      <div class="bar-face roof percentage"></div>
+      <div class="bar-face front percentage"></div>
+       <div class="indicator">1:30</div>
+    </section>
+  <input class="bar-input" type="range" min="0" max="100" value="89" />
+</main>
+            </div>
+            <div class="buttons">
+              <button type="button" id="random"></button>
+              <button type="button" id="before"></button>
+              <button type="button" id="next"></button>
+              <button type="button" id="playPause"></button>
+              <button type="button" id="repeat"></button>
+              <button type="button" id="share"></button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="playlists">
 
       </div>
       <div class="menu">
+        <div class="title">
+          -
+        </div>
+        <div class="left">
 
+        </div>
+        <div class="right">
+
+        </div>
       </div>
     </div>
     <div class="section">
@@ -36,6 +71,7 @@
 
 <footer>
   <script src="javascript/index.js"></script>
+  <script src="javascript/progressBar.js"></script>
 
 </footer>
 
