@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,900');
+
 .back{
   width: 100vw;
   height: 100vh;
   position: absolute;
 }
+
 .menu{
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
@@ -36,12 +39,18 @@
 .player .container .song{
   color: #fefefe;
   margin-bottom: 10%;
+  perspective: 800px;
+  perspective-origin: 50% 60%;
+  text-shadow: 0em 1em 1em #fefefe44;
+  margin-right: 12.5vh;
 }
 
 .player .container .song .name{
   font-size: 180px;
   font-weight: bold;
   text-align: right;
+  transform-style: preserve-3d;
+  transform: rotateY(20deg);
 }
 
 .player .container .song .artist{
@@ -49,16 +58,18 @@
   font-weight: lighter;
   margin-top: -5%;
   text-align: right;
+  transform-style: preserve-3d;
+  transform: rotateY(-20deg);
+  text-shadow: 0em 0em 1em #fefefe;
 }
 
 .player .container .control .progressBar{
-  margin-top: 25%;
+  margin-top: 5%;
+  font-family: "Nunito", sans-serif;
 }
 
-{background-color: rgba(87, 202, 244, .6);}
-
 .perspective {
-  perspective: 60vh;
+  perspective: 70vh;
   text-align: center;
   perspective-origin: 50% 50%;
   position: relative;
@@ -80,7 +91,7 @@
 }
 
 #third-bar .bar-input {
-  width: 50vh;
+  width: 70vh;
   height: 6vh;
 }
 
@@ -114,7 +125,7 @@
 }
 
 #third-bar .bar {
-  width: 50vh;
+  width: 70vh;
   height: 2vh;
 }
 
@@ -145,10 +156,10 @@
 #third-bar .bar .indicator {
   box-shadow: 0px 15px 35px rgba(15, 173, 230, 0.3);
   background: #0FADE6;
-  width: 5vh;
+  width: 6vh;
   height: 4vh;
   color: white;
-  transform: translate(2vh, 4vh);
+  transform: translate(2vh, 5vh) rotateX(-10deg);
   text-align: center;
   font-size: 1.5vh;
   font-weight: lighter;
@@ -164,8 +175,13 @@
   right: 0;
   margin: auto;
   top: -6px;
-  width: 2vh;
+  width: 3vh;
   height: 2vh;
   z-index: -1;
   transform: rotate(45deg);
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr 1fr 1fr 1fr;
 }
